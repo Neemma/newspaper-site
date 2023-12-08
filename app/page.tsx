@@ -140,7 +140,7 @@ const HomePage = () => {
         </div>
       </main>
       <div className="footer">
-
+      
       </div>
       <div className='pagenumber'> 
          {pagenumber}
