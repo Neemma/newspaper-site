@@ -221,7 +221,7 @@ text {
 
 .longest {
   grid-column: span 3;
-  height: 70px;
+  height: 152px;
   border: 1px solid white;
   margin-top: 10px;
   width: 43vw;

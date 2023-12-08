@@ -110,12 +110,6 @@ const PageOne = () => {
             </div>
             </section>
            
-            <div className='item smaller'>
-            <section>
-            <article>
-              </article>
-            </section>
-            </div>
             <div className='item longest'>
             <section>
             <article>
