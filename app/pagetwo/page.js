@@ -118,20 +118,18 @@ const PageTwo = () => {
                         </section>
                     </div>
 
-                    <div className='item longer'>
-                        <section>
-                        </section>
-                    </div>
-                    
-                </div>
-                <div className="pagenumber">
-                        {pagenumber}
-                    </div>
+</div>
+                
+                    </main>
+      <div className="footer">
+  
+      </div>
+      <div className='pagenumber'> 
+         {pagenumber}
+      </div>
 
-            </main>
-
-        </div>
-    );
-}
+    </div>
+  );
+};
 
 export default PageTwo;

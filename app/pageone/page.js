@@ -86,7 +86,6 @@ const PageOne = () => {
               </section>
               <div className='item3'>
                 <section>
-
                   <article>
                     <p>Article content...</p>
                   </article>
@@ -118,47 +117,24 @@ const PageOne = () => {
             </section>
             </div>
           </div>
-         
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div className='item longer'>
-            <section>
-            </section>
-          </div>
+        
 
         </div>
-        <div className="pagenumber">
-          {pagenumber}
-        </div>
+        
 
-      </main>
+        </main>
+      <div className="footer">
+  
+      </div>
+      <div className='pagenumber'> 
+         {pagenumber}
+      </div>
 
     </div>
   );
-}
+};
+
 
 
 
