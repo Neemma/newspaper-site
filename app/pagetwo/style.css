@@ -2,6 +2,32 @@ body {
   background-color: bisque;
 }
 
+i {
+  font-size: 120px;
+}
+
+h3 {
+  padding: 0px;
+  text-align: left;
+
+}
+
+p {
+  padding: 0px;
+  text-align: justify;
+  /* font-family: Love ya like a sister, cursive; */
+  /* font-family: Life Savers; */
+  font-family: Special Elite, cursive;
+}
+
+.h3 {
+  padding-left: 20px;
+}
+.ad{
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+}
 .container {
   width: 70%;
   height: 100%;
@@ -15,16 +41,21 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header1 {
-  background-color: #333;
-  color: #fff;
+  
+  border: 1px solid #333;
+  color: #000;
   text-align: center;
-  padding: 10px 0;
+  padding: 0px;
   margin-bottom: 0px;
-  height: 20vh;
+  height: 30vh;
+  font-family: Frijole, cursive;
   width: 80%;
+  font-size: 18px;
 }
 
 .header2container {
@@ -35,8 +66,8 @@ body {
 }
 
 .header2 {
-  background-color: #333;
-  color: #fff;
+  border: 1px solid #333;
+  color: #000;
   text-align: center;
   padding: 10px 0;
   margin-bottom: 0px;
@@ -45,8 +76,8 @@ body {
 }
 
 .header3 {
-  background-color: #333;
-  color: #fff;
+  border: 1px solid #333;
+  color: #000;
   text-align: center;
   padding: 10px 0;
   margin-bottom: 0px;
@@ -63,9 +94,10 @@ body {
 
 .heading {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   margin: 20px;
+  font-family: Permanent Marker, cursive;
 }
 
 main {
@@ -74,32 +106,45 @@ main {
 
 .grid {
   display: grid;
+  gap: 0px;
   grid-template-columns: 2fr 1fr;
-  gap: 10px;
+
 }
 
 .item {
   background-color: antiquewhite;
-  padding: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  padding: 0px;
 }
+
+.itemImage {
+  background-color: antiquewhite;
+}
+
+.short {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  padding-left: 10px;
+
+}
+
 
 .itemsmall {
   background-color: antiquewhite;
-  padding: 10px;
   width: 100%;
-  border: 1px solid black;
+height: fit-content;
+  padding: 0px;
 }
 
 .large {
   grid-column: span 1;
-  grid-row: span 4;
-  min-height: 550px;
+  grid-row: span 2;
+  min-height: 500px;
 }
 
 .medium {
   grid-row: span 4;
-  min-height: 400px;
+  height: fit-content;
 }
 
 .small {
@@ -109,6 +154,7 @@ main {
 .smallheading {
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
   margin-top: 10px;
   border: 1px solid black;
   padding: 10px;
@@ -116,21 +162,41 @@ main {
 
 .long {
   grid-row: span 5;
-  height: 600px;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .smaller {
   grid-row: span 2;
+  height: fit-content;
 }
 
 .split {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding: 0px;
 }
 
+.splitheader{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+
 section {
-  height: 100%;
+  border: none;
+  height: fit-content;
+}
+
+.Imagetwo {
+  width: fit-content;
+  height: fit-content;
+  object-fit: cover;
+  width: fit-content;
+  padding: 0px;
 }
 
 article {
@@ -140,6 +206,17 @@ article {
 .longer {
   grid-column: span 2;
   height: 30px;
+}
+
+.opo {
+  padding-left: 20px;
+}
+
+.opotext{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px;
+  word-spacing: 5px;
 }
 
 /* Responsive Styles */

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./style.css";
+import Image from 'next/image';
 
 const PageOne = () => {
   const pagenumber = 2;
@@ -7,7 +8,7 @@ const PageOne = () => {
     <div className="container">
       <div className="headercontainer">
         <div className="header1">
-          <h1>IMAGE</h1>
+          <Image src="/urahara.svg" alt="Header Image" width={700} height={250} />
         </div>
 
         <div className="header2container">
@@ -29,17 +30,15 @@ const PageOne = () => {
       </div>
 
       <div className="heading">
-        <p>TITLE HEADING</p>
+        <p className='heading'>TITLE HEADING</p>
       </div>
+
       <main>
         <div className="grid">
           <div className="item small">
             <section>
-              <h2>News Section 1</h2>
-              <article>
-                <h3>Article Title 1</h3>
-                <p>Article content...</p>
-              </article>
+              <h3>MISSING:</h3>
+            <Image src="/oldman.svg" alt="Header Image" width={300} height={300} />
             </section>
           </div>
 
@@ -84,6 +83,7 @@ const PageOne = () => {
                   <p>Article content...</p>
                 </article>
               </section>
+              
               <div className='item3'>
                 <section>
                   <article>
@@ -104,33 +104,20 @@ const PageOne = () => {
                 <h3>Article Title 1</h3>
                 <p>Article content...</p>
               </article>
-              <div className="caption2">
-              <p>rrrrrrrrrrddddddd</p>
-            </div>
+            
             </section>
            
             <div className='item longest'>
-            <section>
-            <article>
-              sdf
-              </article>
-            </section>
+            <section>bhb</section>
             </div>
-          </div>
-
-        
-
+          </div> 
         </div>
-        
-
         </main>
       <div className="footer">
-  
       </div>
       <div className='pagenumber'> 
          {pagenumber}
       </div>
-
     </div>
   );
 };

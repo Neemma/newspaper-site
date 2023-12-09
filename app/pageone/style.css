@@ -19,13 +19,18 @@ body {
 }
 
 .header1 {
-  background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
   margin-bottom: 0px;
   height: 40vh;
-  width: 80%;
+  width: fit-content;
+}
+
+.caption {
+  text-align: right;
+  font-size: 13px;
+  width: 76%;
+  font-style: italic;
 }
 
 .header2container {
@@ -55,13 +60,6 @@ body {
   width: 100%;
 }
 
-.caption {
-  text-align: right;
-  font-size: 13px;
-  width: 82%;
-  font-style: italic;
-}
-
 .line {
   margin-top: 20px;
   border-bottom: 10px solid black;
@@ -71,7 +69,7 @@ body {
 
 .heading {
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   margin: 20px;
 }
@@ -106,8 +104,8 @@ main {
 
 .medium {
   grid-column: span 2;
-  width: 30vw;
-  height: 40vh;
+  width: 35vw;
+  height: 42vh;
 }
 
 .small {
@@ -211,7 +209,7 @@ text {
   height: 186px;
   border: 1px solid white;
   margin-top: 10px;
-  width: 43vw;
+  width: 40vw;
 }
 
 
