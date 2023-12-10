@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style.css";
 import Image from 'next/image';
+import backgroundImage from "../../public/Susumu-Nakoshi-Icon.svg"
 
 const PageTwo = () => {
     const pagenumber = 3;
@@ -8,7 +9,10 @@ const PageTwo = () => {
         <div className="container">
 
             <div className="headercontainer">
-                <div className="header2container">
+
+                <div className="header2container"
+
+                  >
                     <div className="header2">
                         <h1>AD</h1>
                     </div>
@@ -18,7 +22,7 @@ const PageTwo = () => {
                     </div>
                 </div>
                 <div className="header1">
-                    <h1><i>H</i>EADING</h1>
+                    <h1><i>D</i>eath and <i>H</i>ell</h1>
                 </div>
 
                 <div className="header2container">
