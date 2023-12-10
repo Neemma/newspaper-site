@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 
 const HomePage = () => {
 
@@ -158,8 +158,11 @@ const HomePage = () => {
 
       </div>
       <div className='pagenumber'>
-        {pagenumber}
-      </div>
+               
+                <Link  className="pagenumber"   href="/pageone">
+                    {pagenumber}
+                    </Link>
+            </div>
 
     </div>
   );
