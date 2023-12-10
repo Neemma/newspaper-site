@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PageOne = () => {
   const pagenumber = 2;
@@ -115,9 +116,13 @@ const PageOne = () => {
         </main>
       <div className="footer">
       </div>
-      <div className='pagenumber'> 
-         {pagenumber}
-      </div>
+      <div className='pagenumber'>
+               
+               <Link  className="pagenumber"   href="/pagetwo">
+                   {pagenumber}
+                   </Link>
+           </div>
+
     </div>
   );
 };
