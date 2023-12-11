@@ -5,7 +5,10 @@ body {
 i {
   font-size: 120px;
 }
+.b{
+  font-size: 16px;
 
+}
 .caption{
   margin-left: 42px;
   font-size: 8px;
@@ -164,6 +167,7 @@ main {
   grid-column: span 1;
   grid-row: span 2;
   min-height: 500px;
+  border-bottom: 1px solid black;
 }
 
 .medium {
