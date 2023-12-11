@@ -7,8 +7,21 @@ i {
 }
 .b{
   font-size: 16px;
-
 }
+.adheading{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3px;
+  height: 5px;
+  padding: 10px;
+  font-weight: 800;
+  font-family: Life Savers, serif;
+}
+.underline{
+  text-decoration: underline;
+}
+
 .caption{
   margin-left: 42px;
   font-size: 8px;
@@ -56,7 +69,7 @@ p {
   width: 70%;
   height: 100%;
   margin: auto;
-  border: 1px solid #333;
+  border: 2px solid #333;
   padding: 20px;
   background-color: antiquewhite;
 }
@@ -67,20 +80,26 @@ p {
   gap: 10px;
   justify-content: center;
   align-items: center;
+  padding: 0px;
+  padding-top: 6px;
+  border-top: 2px solid black;
 }
 
 .header1 {
-  border: 1px solid #333;
+  border-bottom: 2px solid black;
+  margin-top: 0px;
   color: #000;
   text-align: center;
   padding: 0px;
   margin-bottom: 0px;
-  height: 30vh;
+  height: 27vh;
   font-family: Life Savers, cursive;
   width: 80%;
   font-size: 20px;
   word-spacing: 10px;
-  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+ 
 }
 
 .header2container {
@@ -91,31 +110,52 @@ p {
 }
 
 .header2 {
-  border: 1px solid #333;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
   color: #000;
   text-align: center;
-  padding: 10px 0;
   margin-bottom: 0px;
-  height: 60%;
+  height: fit-content;
   width: 100%;
-  border-radius: 10px;
+  padding: 0px;
+}
+
+.bordernone {
+  border: none;
+  background-color: antiquewhite;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+}
+
+.weather{
+  font-family: Life Savers, cursive;
+  height: 3px;
+  padding: 0px;
+  margin: 0px;
+  text-align: right;
+}
+
+.borderbottom {
+  margin-top: 4px;
+  border-bottom: 2px solid #333;
 }
 
 .header3 {
-  border: 1px solid #333;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
   color: #000;
   text-align: center;
   padding: 10px 0;
   margin-bottom: 0px;
-  height: 40%;
+  height: fit-content;
   width: 100%;
-  border-radius: 10px;
 }
 
 .line {
   margin-top: 20px;
-  border-bottom: 10px solid black;
-  border-top: 10px solid black;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
   padding: 10px;
 }
 
@@ -125,6 +165,12 @@ p {
   font-weight: bold;
   margin: 20px;
   font-family: Permanent Marker, cursive;
+}
+
+.fontsize{
+  font-size: 60px;
+  word-spacing: 40px;
+  margin-top: 40px;
 }
 
 main {
@@ -277,6 +323,7 @@ align-items: center;
 @media (max-width: 900px) {
   .container {
     width: 90%;
+    
   }
 
   .grid {
