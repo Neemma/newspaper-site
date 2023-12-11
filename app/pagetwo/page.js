@@ -1,40 +1,62 @@
 import React from 'react';
 import "./style.css";
 import Image from 'next/image';
-import backgroundImage from "../../public/Susumu-Nakoshi-Icon.svg"
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import backgroundImage from "../../public/geto.svg";
+import texture from "../../public/inked.svg";
 
 const PageTwo = () => {
     const pagenumber = 3;
     return (
-        <div className="container">
+        <div className="container"
+        style={{
+            backgroundImage: `url(${texture.src})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat", 
+          }}>
+            <div className="headercontainer"
+            >
+                <div className="header2container">
 
-            <div className="headercontainer">
-
-                <div className="header2container"
-
-                >
-                    <div className="header2">
-                        <h1>AD</h1>
+                    <div className="header2"
+                    
+                    >
+                        <h3 className='adheading underline'>FRIDAY</h3>
+                        <h3 className='adheading underline'>19th April 1985</h3>
+                        <h3 className='adheading'>10 Pages</h3>
                     </div>
 
                     <div className="header3">
-                        <h1>AD</h1>
+                        <h3 className='adheading'>VOL 89</h3>
                     </div>
                 </div>
                 <div className="header1">
-
+<h2 className='heading fontsize'>The Not-Times</h2>
                 </div>
 
                 <div className="header2container">
-                    <div className="header2">
-                        <h1>AD</h1>
+                    <div className='header2 bordernone' 
+                        style={{
+                            backgroundImage: `url(${backgroundImage.src})`,
+                            backgroundPosition: "center",
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat",
+                            width: "70px",
+                            height: "140px",
+                            marginLeft: "30px",
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}
+                    >
                     </div>
-
-                    <div className="header3">
-                        <h1>AD</h1>
+                    <p className='weather'>WEATHER:</p>
+                    <p className='weather'>As sunny as it gets</p>
+                    <div className="borderbottom"> 
                     </div>
+                       
                 </div>
             </div>
 
@@ -55,8 +77,6 @@ const PageTwo = () => {
                         <Image src={'/todayyoudied.svg'} width={600} height={500} alt="image" />
 
                     </div>
-
-
 
                     <div className="item short Image">
                         <section>
@@ -124,7 +144,7 @@ const PageTwo = () => {
                     </div>
 
                     <div className="item smaller">
-                        <h3 className='opotext'>Disaster Shakes The Capital</h3>
+                        <h3 className='opotext'>Disaster Hits The Capital</h3>
                         <div className="split">
                             <div className="itemsmall">
                                 <section>
@@ -179,12 +199,12 @@ const PageTwo = () => {
                 <div>
                     <p className='adcaption'> USD <b>2999</b> ONLY</p>
                 </div>
-                
+
                 <div >
                     <p className='adcaption'><b> MACINTOSH 128K</b></p>
-                  
+
                 </div>
-                
+
                 <div>
                     <p className='adcaption'> BUY NOW AND GET <b> FREE</b> FLOPPY DISKS! </p>
                 </div>
@@ -199,11 +219,11 @@ const PageTwo = () => {
 
             </div >
             <div className='pagenumber'>
-               
-               <Link  className="pagenumber"   href="/">
-                   {pagenumber}
-                   </Link>
-           </div>
+
+                <Link className="pagenumber" href="/">
+                    {pagenumber}
+                </Link>
+            </div>
 
 
         </div>
