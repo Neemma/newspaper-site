@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Love+Ya+Like+A+Sister&family=Rock+Salt&family=Wavefont:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Life+Savers:wght@700;800&family=Noto+Sans+Symbols+2&family=Pixelify+Sans:wght@400;500;600;700&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Marhey:wght@300..700&family=Ojuju:wght@200..800&family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.container {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  border: 1px solid #333;
+  padding: 20px;
+}
+
+
+.cont {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  border: 1px solid #333;
+  padding: 20px;
+  color: #000;
+  padding: 20px;
+  float: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+}
+
+.title {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+.price {
+  float: right;
+  font-size: 15px;
+  font-style: bold;
+  font-weight: 800;
+  text-decoration: underline;
+  color: rgb(34, 22, 22);
+}
+
+.issue {
+  font-size: 15px;
+  float: left;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 13px;
+  float: right;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 13px;
+  float: left;
+  font-weight: bold;
+}
+
+.top {
+  font-size: 13px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.title,
+.date,
+.issue,
+.price,
+.location {
+  margin: 5px 0;
+  font-family: Tektur;
+  /* font-weight: bold; */
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
+  /* font-family: Love ya like a sister, cursive; */
+  /* font-family: Life Savers; */
+  font-family: Special Elite, cursive;
+  font-size: 10px;
+}
+
+.header {
+  border-bottom: 5px double black;
+  border-style: double;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+
+}
+
+.h2 {
+  /* font-family: Rock Salt, cursive; */
+  font-size: 30px;
+  font-weight: 400;
+  font-style: regular;
+  text-align: center;
+  word-spacing: 35px;
+  color: #000;
+}
+
+.newstitle {
+  font-family: Marhey, sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  font-style: bold;
+  text-align: center;
+  word-spacing: 15px;
+  padding: 0px;
+  margin: 0px;
+  color: #000;
+}
+
+.h2right {
+  font-family: Rock Salt, cursive;
+  font-weight: 400;
+  font-style: regular;
+  text-align: right;
+  font-size: 10px;
+  margin-right: 210px;
+  word-spacing: 10px;
+  color: #000;
+}
+
+h2 {
+  font-family: Marhey, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: bold;
+  color: #333;
+  text-align: left;
+  width: 100%;
+}
+
+.h2right1 {
+  font-family: Marhey;
+  width: 95%;
+  float: right;
+  color: #333;
+  font-style: bold;
+  text-align: right;
+  font-size: 20px;
+  margin: 0px;
+  padding-top: 0px;
+  word-spacing: 10px;
+  font-weight: 600;
+  font-size: small;
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: Marhey, sans-serif;
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 400;
+  text-align: left;
+  color: #333;
+  padding: 0px;
+  margin: 0px;
+}
+
+.imagedecor {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 0px;
+  font-family: Wavefont;
+}
+
+/* p{
+  font-family: Water Brush, cursive;
+  font-size: 10px;
+} */
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 20px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+
+.item {
+  background-color: #f4f4f4;
+  font-family: Special Elite, cursive;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.itemsmall {
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+
+.medium {
+  grid-row: span 2;
+}
+
+.small {
+  grid-row: span 1;
+}
+
+.long {
+  grid-row: span 3;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  margin: 0px;
+}
+
+section {
+  height: 100%;
+  width: fit-content;
+}
+
+.Image {
+  width: fit-content;
+  text-align: center;
+  font-family: Special Elite, cursive;
+  margin: 0px;
+  height: 80%;
+  object-fit: cover;
+  width: fit-content;
+}
+
+.ClimberImage {
+  width: 80%;
+  text-align: center;
+  text-decoration: underline;
+  padding: 0px;
+  margin: 0px;
+  background-color: #f4f4f4;
+  height: fit-content;
+  object-fit: cover;
+  width: fit-content;
+}
+
+.navigation-arrow {
+  cursor: pointer;
+  margin: 0px;
+  rotate: 20deg;
+  top: auto;
+  margin-top: 150px;
+}
+
+.navigation-arrow2 {
+  cursor: pointer;
+  top: auto;
+  margin: 0px;
+  rotate: 200deg;
+  margin-top: 150px;
+}
+
+
+.set {
+  padding: 0px;
+  margin: 0px;
+}
+
+.invisible {
+  color: transparent;
+}
+
+.left {
+  padding: 0px;
+  margin: 0px;
+  float: right;
+  color: #000;
+  font-family: Homemade Apple;
+}
+
+.captionn {
+  font-size: 13px;
+  font-weight: 600;
+  float: right;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: #1d1919;
+  font-family: Marhey;
+
+}
+
+
+.cartoon {
+  font-weight: bold;
+  font-size: small;
+  text-decoration: underline;
+  text-align: left;
+  padding: 0px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0px;
+}
+
+.headerr {
+  font-weight: bold;
+  font-size: small;
+  margin: 0px;
+  padding: 0px;
+  /* text-align: center; */
+}
+
+.headerrr {
+  font-weight: bold;
+  font-size: medium;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.centerimage {
+  float: center;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.clear {
+  background: none;
+}
+
+.cart {
+  font-weight: bold;
+  font-size: small;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.cartt {
+  font-weight: bold;
+  font-size: 13px;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+article {
+  margin: 0px;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  padding: 4px;
+}
+
+.pagenumber {
+  margin-top: 10px;
+  height: 20px;
+  width: 100%;
+  text-align: right;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Rock Salt, cursive;
+  color: #000;
+  color: initial;
+}
+
+@media (max-width: 1200px){
+  .container {
+    width: 90%;
+  }
+}
+
+/* @media (max-width: 1000px){
+  .container {
+    width: 98%;
+  }
+} */
+
+@media (max-width: 1000px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .cont {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border: none;
+    padding: 0px;
+
+  }
+
+  .title,
+  .date,
+  .issue,
+  .price,
+  .location {
+    margin-top: 5px;
+    padding: 0px;
+    margin-bottom: 0px;
+
+  }
+
+
+  .newstitle {
+    font-size: 40px;
+
+  }
+
+  .large {
+    grid-column: span 1;
+    grid-row: span 1;
+
+  }
+
+  .medium {
+    grid-row: span 1;
+  }
+
+  .small {
+    grid-row: span 1;
+  }
+
+  .long {
+    grid-row: span 1;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0px;
+    width: 450px;
+    padding: 0px;
+  }
+
+
+  .ClimberImage {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .Image {
+    background: transparent;
+  }
+
+  .centerimage {
+    float: center;
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+  }
+
+  .cart,
+  .cartt,
+  .cartoon {
+    text-align: center;
+
+  }
+
+  .sakamoto {
+    float: center;
+    width: 80%;
+    border: 1px solid #000;
+
+  }
+  .item.clear.small {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Use the full width of the container */
+    margin: auto; /* Center the div itself if necessary */
+  }
+  
+  .Imageset {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    width: 100%; /* Ensure the container takes full width */
+  }
+  
+  .sakamoto {
+    margin-top: 10px; /* Adjust top margin to space out the image from the text */
+    margin-bottom: 10px; /* Adjust bottom margin for spacing below the image */
+  }
+  
+
+  .itemsmall {
+    background: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .comic {
+    width: 60%;
+    padding: 0px;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
+
+  .footer {
+    width: 98%;
+    height: 20px;
+    margin-top: 10px;
+    padding: 4px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .large,
+  .medium,
+  .small,
+  .long {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .navigation-arrow,
+  .navigation-arrow2 {
+    width: 60px;
+    height: 60px;
+    margin-top: 0px;
+
+  }
+
+  .centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .Image {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+
+  }
+
+  .ClimberImage {
+    width: 100%;
+    margin: auto;
+  }
+
+  .captionn {
+    display: block;
+    text-align: right;
+    margin-right: 12px;
+  }
+
+  .item.set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    background-color: #f4f4f4;
+  }
+
+  .split.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: none;
+
+  }
+
+  .navigation-arrow,
+  .navigation-arrow2,
+  .comic {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .cartoon {
+    text-align: center;
+    width: 100%;
+  }
+
+
+
+
+  /* .Image,
+  .ClimberImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .centre{
+    width: 100%;
+    justify-content: center;
+  
+  } */
+
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .cont {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border: none;
+    padding: 0px;
+
+  }
+
+  .title,
+  .date,
+  .issue,
+  .price,
+  .location {
+    margin-top: 5px;
+    padding: 0px;
+    margin-bottom: 0px;
+
+  }
+
+
+  .newstitle {
+    font-size: 30px;
+
+  }
+
+  .large {
+    grid-column: span 1;
+    grid-row: span 1;
+
+  }
+
+  .medium {
+    grid-row: span 1;
+  }
+
+  .small {
+    grid-row: span 1;
+  }
+
+  .long {
+    grid-row: span 1;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0px;
+    width: 450px;
+    padding: 0px;
+  }
+
+
+
+  .centerimage {
+    float: center;
+    width: 440px;
+    height: 300px;
+  }
+
+  .cart,
+  .cartt,
+  .cartoon {
+
+    text-align: center;
+
+  }
+
+  .sakamoto {
+    float: center;
+    width: 440px;
+  }
+
+  .itemsmall {
+    background: none;
+    width: 95%;
+    padding: 7px;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .footer {
+    width: 98%;
+    height: 20px;
+    margin-top: 10px;
+    padding: 4px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .large,
+  .medium,
+  .small,
+  .long {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .navigation-arrow,
+  .navigation-arrow2 {
+    width: 60px;
+    height: 60px;
+    margin-top: 120px;
+  }
+
+  .centre {
+    width: 100%;
+    justify-content: center;
+
+  }
+
+  .item.set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .split.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+  }
+
+  .comic {
+    width: 200px;
+    padding: 0px;
+  }
+
+  .navigation-arrow,
+  .navigation-arrow2,
+  .comic {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .cartoon {
+    text-align: center;
+    width: 100%;
+  }
+
+
+
+
+}
