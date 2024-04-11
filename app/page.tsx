@@ -118,7 +118,7 @@ const HomePage = () => {
                   <h3 className='set headerr'>Existence is Base</h3>
                   <p>Article contntent...Lorem ipsum dolor sit a uundeSed ut persSed ut perspiciatis uunde omSed umet, consectetur adiptis .Lorem ut perspiciatis uunde omnis iste sLorem ips ipsum dolor sit amet,ipsum dolor sit ametntium consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Sed ut persSent...Lo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit aorm dolor sit a uundeSed ut persSed ut perspiciatis uunde omSed umet, consectetur adiptis .Lorem ut perspiciatis uunde omnis iste sLorem ips ipsum dolor sit amet,ipsum dolor sit ametntium consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, suaborum.
-                    .</p>
+                    </p>
                 </article>
               </section>
             </div>
