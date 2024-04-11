@@ -279,16 +279,18 @@ const HomePage = () => {
                 </article>
               </section>
             </div>
-
-
-
           </div>
         </main>
-        <div className="footer">
-<p> All Images Used for this project are rightfully not mine.......</p>
-        </div>
-        <div className='pagenumber'>
 
+        <div className="footer">
+          <p className='footertext'>
+            Please note: All images featured on this site are the property of their respective owners. 
+            <br></br>
+            They are used here for illustrative purposes only and are not claimed as my own work.
+          </p>
+        </div>
+
+        <div className='pagenumber'>
           <a className="pagenumber" href="/pageone">
             {pagenumber}
           </a>

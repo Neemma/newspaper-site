@@ -400,7 +400,26 @@ article {
   height: 40px;
   border: 1px solid #000;
   margin-top: 20px;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+.footertext {
+  width: fit-content;
+  text-align: center;
+  font-family: Tektur; 
+  font-weight: 600;
   padding: 4px;
+ 
+}
+
+.footertext:hover {
+  color: #1f0707;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .pagenumber {
@@ -525,24 +544,24 @@ article {
 
   }
   .item.clear.small {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align items horizontally */
-    text-align: center; /* Center-align text */
-    width: 100%; /* Use the full width of the container */
-    margin: auto; /* Center the div itself if necessary */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    width: 100%; 
+    margin: auto; 
   }
   
   .Imageset {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align items horizontally */
-    width: 100%; /* Ensure the container takes full width */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 100%; 
   }
   
   .sakamoto {
-    margin-top: 10px; /* Adjust top margin to space out the image from the text */
-    margin-bottom: 10px; /* Adjust bottom margin for spacing below the image */
+    margin-top: 10px; 
+    margin-bottom: 10px; 
   }
   
 
@@ -829,6 +848,11 @@ article {
   .cartoon {
     text-align: center;
     width: 100%;
+  }
+
+  .footertext{
+    font-size: 8px;
+    padding: 4px;
   }
 
 
