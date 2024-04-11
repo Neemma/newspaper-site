@@ -2,6 +2,7 @@ body {
   background-color: bisque;
 }
 
+
 .container {
   width: 70%;
   height: 100%;
@@ -26,12 +27,55 @@ body {
   width: fit-content;
 }
 
+a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #000;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+  background: #000;
+}
+
+
 .caption {
   text-align: right;
   font-size: 13px;
   width: 76%;
   font-style: italic;
 }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.heading p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
 
 .header2container {
   display: flex;
@@ -89,6 +133,12 @@ main {
   padding: 10px;
   border: 1px solid rgb(255, 255, 255);
 }
+/* 
+.item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+} */
+
 
 .itemsmall {
   background-color: antiquewhite;

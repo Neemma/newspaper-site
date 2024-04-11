@@ -220,9 +220,9 @@ const PageTwo = () => {
             </div >
             <div className='pagenumber'>
 
-                <Link className="pagenumber" href="/">
+                <a className="pagenumber" href="/">
                     {pagenumber}
-                </Link>
+                </a>
             </div>
 
 

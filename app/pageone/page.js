@@ -1,14 +1,41 @@
+"use client"
 import React from 'react';
 import "./style.css";
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 
 const PageOne = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   const pagenumber = 2;
   return (
+    <motion.div
+    ref={ref}
+    animate={controls}
+    initial="hidden"
+    variants={{
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+      hidden: { opacity: 0, scale: 0.95 }
+    }}
+  >
     <div className="container">
       <div className="headercontainer">
         <div className="header1">
+          
+
           <Image src="/urahara.svg" alt="Header Image" width={700} height={250} />
         </div>
 
@@ -49,6 +76,7 @@ const PageOne = () => {
               <article>
                 <h3>Article Title 2</h3>
                 <p>Article content...</p>
+                <a> Thus is somethsnd ajhsbnd ejbb</a>
               </article>
             </section>
           </div>
@@ -118,16 +146,15 @@ const PageOne = () => {
       </div>
       <div className='pagenumber'>
                
-               <Link  className="pagenumber"   href="/pagetwo">
+               <a  className="pagenumber"   href="/pagetwo">
                    {pagenumber}
-                   </Link>
+                   </a>
            </div>
 
     </div>
+    </motion.div>
   );
 };
-
-
 
 
 export default PageOne;
