@@ -1,16 +1,17 @@
 body {
-  background-color: bisque;
+  background-color: black;
 }
-
 
 .container {
   width: 70%;
   height: 100%;
   margin: auto;
-  border: 1px solid #ffffff;
+  border: 5px solid #ffffff;
   padding: 20px;
-  background-color: bisque;
+  background-color: black;
 }
+
+
 
 .headercontainer {
   display: flex;
@@ -27,32 +28,6 @@ body {
   width: fit-content;
 }
 
-a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-}
-
-a:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  margin-top: 5px;
-  right: 0;
-  background: #000;
-  transition: width 0.3s ease;
-  -webkit-transition: width 0.3s ease;
-}
-
-a:hover:after {
-  width: 100%;
-  left: 0;
-  background: #000;
-}
-
-
 .caption {
   text-align: right;
   font-size: 13px;
@@ -60,54 +35,41 @@ a:hover:after {
   font-style: italic;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-.heading p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 4.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-
 .header2container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 16%;
+  width: 80%;
+  margin-right: 20px;
+ 
 }
 
 .header2 {
-  background-color: #333;
+  background-color: none;
   color: #fff;
   text-align: center;
   padding: 10px 0;
   margin-bottom: 0px;
   height: 70%;
   width: 100%;
+  border: 1px solid #fff;
 }
 
 .header3 {
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
   text-align: center;
   padding: 10px 0;
   margin-bottom: 0px;
   height: 30%;
   width: 100%;
+  border: 1px solid #fff;
 }
 
 .line {
   margin-top: 20px;
-  border-bottom: 10px solid black;
-  border-top: 10px solid black;
+  border-bottom: 10px solid white;
+  border-top: 10px solid white;
   padding: 10px;
 }
 
@@ -116,6 +78,11 @@ a:hover:after {
   font-size: 60px;
   font-weight: bold;
   margin: 20px;
+  color: #fff;
+}
+
+h3, p, h2{
+  color: #fff;
 }
 
 main {
@@ -129,16 +96,10 @@ main {
 }
 
 .item {
-  background-color: bisque;
+  background-color: transparent;
   padding: 10px;
   border: 1px solid rgb(255, 255, 255);
-}
-/* 
-.item:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-} */
-
+}z
 
 .itemsmall {
   background-color: antiquewhite;
@@ -154,37 +115,62 @@ main {
 
 .medium {
   grid-column: span 2;
-  width: 35vw;
+  width: 98%;
   height: 42vh;
 }
 
 .small {
   grid-row: span 1;
+  height: fit-content;
 }
+
+.smalll{
+  height: fit-content;
+}
+
+.oldman{
+  background-color: white;
+}
+
+.smallll{
+  height: fit-content;
+  margin-bottom: 10px;
+ 
+}
+
+.blacktext{
+  color: black;
+  background-color: white;
+}
+
+
 
 .item1 {
   grid-column: span 1;
   grid-row: span 3;
-  background-color: bisque;
+  background-color: transparent;
   border: 1px solid white;
-  height: 500px;
+  height: 590px;
   padding: 10px;
 }
 
 .item2 {
   grid-column: span 1;
   grid-row: span 3;
-  background-color: bisque;
+  background-color: transparent;
   border: 1px solid white;
-  height: 300px;
+  height: fit-content;
   padding: 10px;
 }
 
 .item3 {
-  background-color: bisque;
+  background-color: transparent;
   border: 1px solid white;
-  height: 56%;
+  height: 280px;
+  width: 100%;
   padding: 10px;
+  overflow: hidden;
+  
 }
 
 .caption2 {
@@ -227,11 +213,12 @@ article {
   margin-bottom: 10px;
 }
 
-.footer {
+.footerr {
   width: 100%;
-  height: 30px;
-  border: 1px solid #000;
+  height: 40px;
+  border: 1px solid white;
   margin-top: 20px;
+ 
 }
 
 text {
@@ -256,10 +243,10 @@ text {
 
 .longest {
   grid-column: span 3;
-  height: 186px;
+  height: 290px;
   border: 1px solid white;
   margin-top: 10px;
-  width: 40vw;
+  width: 98%;
 }
 
 

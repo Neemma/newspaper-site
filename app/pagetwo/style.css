@@ -5,10 +5,55 @@ body {
 i {
   font-size: 120px;
 }
-.b{
+
+.b {
   font-size: 16px;
 }
-.adheading{
+
+
+
+.itemImage.large.Imagetwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  grid-column: span 1;
+  grid-row: span 2;
+  border-bottom: 1px solid black;
+  width: fit-content;
+  height: fit-content;
+
+}
+
+.opotext {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+  word-spacing: 5px;
+  text-decoration: underline;
+  text-align: center;
+  /* Ensure text alignment is centered */
+}
+
+.caption1 {
+  font-size: 8px;
+  font-style: italic;
+  font-family: 'Life Savers', cursive;
+  text-align: center;
+  /* Center the caption text */
+  width: 100%;
+  /* Stretch to fit container width */
+  margin: 10px 0;
+  /* Adjust margin as needed */
+}
+
+.youdied {
+  padding: 0px;
+}
+
+
+.adheading {
   font-size: 12px;
   font-weight: bold;
   text-align: center;
@@ -18,11 +63,12 @@ i {
   font-weight: 800;
   font-family: Life Savers, serif;
 }
-.underline{
+
+.underline {
   text-decoration: underline;
 }
 
-.caption{
+.caption {
   margin-left: 42px;
   font-size: 8px;
   text-align: right;
@@ -31,7 +77,9 @@ i {
 
 }
 
-.caption1{
+
+
+.caption1 {
   margin-left: 435px;
   font-size: 8px;
   text-align: right;
@@ -66,11 +114,14 @@ p {
 }
 
 .container {
-  width: 70%;
+  width: 72%;
   height: 100%;
   margin: auto;
   border: 2px solid #333;
-  padding: 20px;
+  /* padding: 20px; */
+  background-image: url("/inked.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: antiquewhite;
 }
 
@@ -99,7 +150,7 @@ p {
   word-spacing: 10px;
   text-align: center;
   justify-content: center;
- 
+
 }
 
 .header2container {
@@ -108,6 +159,7 @@ p {
   gap: 10px;
   width: 20vh;
 }
+
 
 .header2 {
   border-left: 2px solid #333;
@@ -122,16 +174,32 @@ p {
 
 .bordernone {
   border: none;
-  background-color: antiquewhite;
   border-radius: 0px;
   margin-bottom: 10px;
   margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url("/geto.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 140px;
+
 }
 
-.weather{
+.eighty {
+  padding: 17px;
+}
+
+.weather {
   font-family: Life Savers, cursive;
   height: 3px;
-  padding: 0px;
+  padding: 8px;
   margin: 0px;
   text-align: right;
 }
@@ -167,7 +235,7 @@ p {
   font-family: Permanent Marker, cursive;
 }
 
-.fontsize{
+.fontsize {
   font-size: 60px;
   word-spacing: 40px;
   margin-top: 40px;
@@ -190,9 +258,7 @@ main {
   padding: 0px;
 }
 
-.itemImage {
-  background-color: antiquewhite;
-}
+
 
 .short {
   border-top: 1px solid black;
@@ -207,13 +273,6 @@ main {
   width: 100%;
   height: fit-content;
   padding: 0px;
-}
-
-.large {
-  grid-column: span 1;
-  grid-row: span 2;
-  min-height: 500px;
-  border-bottom: 1px solid black;
 }
 
 .medium {
@@ -266,6 +325,15 @@ section {
   height: fit-content;
 }
 
+
+.large {
+  grid-column: span 1;
+  grid-row: span 2;
+  min-height: 500px;
+  border-bottom: 1px solid black;
+}
+
+
 .Imagetwo {
   width: fit-content;
   height: fit-content;
@@ -283,9 +351,20 @@ article {
   height: 30px;
 }
 
-.opo {
-  padding-left: 20px;
+
+
+.item.opo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
 }
+
+/* .opotext, .caption {
+  width: 100%; 
+} */
 
 .opotext {
   font-size: 12px;
@@ -296,13 +375,14 @@ article {
 
 }
 
-.footer{
+.footer {
   display: flex;
   gap: 40px;
-align-items: center;
+  align-items: center;
   justify-content: center;
 }
-.adcaption{
+
+.adcaption {
   font-family: Pixelify Sans;
   font-size: 12px;
   color: #000;
@@ -310,7 +390,7 @@ align-items: center;
   text-align: center;
 }
 
-.adcaptionred{
+.adcaptionred {
   font-family: Pixelify Sans;
   font-size: 12px;
   color: red;
@@ -320,12 +400,72 @@ align-items: center;
 
 /* Responsive Styles */
 
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+
+  }
+
+  .itemImage.large.Imagetwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 1;
+    grid-row: span 2;
+    height: fit-content;
+    padding: 30px;
+    margin-left: 100px;
+
+  }
+
+  .youdied {
+    width: 400px;
+    height: 400px;
+    float: center;
+    padding: 0px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
 @media (max-width: 900px) {
   .container {
     width: 90%;
-    
+
   }
 
+  .fontsize {
+    font-size: 50px;
+    word-spacing: 2px;
+    margin-top: 10px;
+    width: 100%;
+     }
+
+.bordernone{
+  width: 50px;
+  gap: 0px;
+  height: 100px;
+}
+.eighty{
+  padding: 0px;
+}
+
+
+  .adheading {
+    font-size: 8px;
+    margin-top: 0px;
+    height: 2px;
+    padding: 7px;
+  }
   .grid {
     grid-template-columns: 2fr;
   }
@@ -350,49 +490,209 @@ align-items: center;
     grid-row: span 1;
   }
 
-  .short{
+  .short {
     border-top: none;
     border-left: none;
     align-items: center;
     justify-content: center;
     margin-left: 80px;
-  
+
   }
 
-  .smallheading{
+  .smallheading {
     font-size: 15px;
   }
 
-  .opotext{
+  .opotext {
     text-align: center;
     justify-content: center;
     width: 480px;
   }
-i{
-  visibility: hidden;
+
+  i {
+    visibility: hidden;
+  }
+
+  .footer {
+    display: flex;
+    width: 98%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adcaption {
+    font-family: Pixelify Sans;
+    font-size: 10px;
+    color: #000;
+    word-spacing: 0px;
+    text-align: center;
+  }
+
+  .adcaptionred {
+    font-family: Pixelify Sans;
+    font-size: 10px;
+    color: red;
+    word-spacing: 0px;
+    text-align: center;
+  }
+  
+.itemImage.large.Imagetwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  grid-column: span 1;
+  grid-row: span 2;
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: fit-content;
+
+  margin-left: 200px;
+
+
 }
+.youdied {
+  width: 400px;
+  height: 300px;
+  padding: 0px;
 }
 
-/* 
+
+}
+
+
 @media (max-width: 600px) {
   .container {
-    width: 95%;
+    width: 100%;
+    background-image: none;
+    background-color: antiquewhite;
+  }
+
+article{
+  font-size: 4x;
+}
+.itemImage.large.Imagetwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  grid-column: span 1;
+  grid-row: span 2;
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: fit-content;
+
+  margin-left: 100px;
+
+
+}
+.youdied {
+  width: 400px;
+  height: 300px;
+  padding: 0px;
+}
+
+
+
+  .adheading {
+    font-size: 8px;
+    margin-top: 0px;
+    height: 2px;
+    padding: 7px;
+  }
+
+  i {
+    font-size: 70px;
+  }
+
+  .geto {
+    width: 40px;
+    height: 50px;
+  }
+
+  .fontsize {
+    font-size: 80px;
+    word-spacing: 5px;
+    margin-top: 10px;
+    width: 100%;
+    color: #000;
+  }
+
+
+
+  .caption1 {
+    margin-left: 0px;
+    font-size: 8px;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    font-family: Permanent Marker, cursive;
   }
 
   .grid {
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
   }
 
+
+  .youdied {
+    width: 350px;
+    height: 350px;
+    float: center;
+  }
+
+  .mob{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+  }
+.item.opo{
+  width: 95%;
+}
   .large,
   .medium,
   .small {
     grid-column: span 1;
-    grid-row: auto;
+    grid-row: span 4;
     min-height: auto;
   }
 
   .long,
   .smaller {
     grid-row: span 1;
+    min-height: auto;
   }
-} */
+  
+  .footer {
+    display: flex;
+    width: 98%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adcaption {
+    font-family: Pixelify Sans;
+    font-size: 8px;
+    color: #000;
+    word-spacing: 0px;
+    text-align: center;
+  }
+
+
+  .hide {
+    display: none;
+  }
+
+  .adcaptionred {
+    font-size: 8px;
+    word-spacing: 0px;
+    
+  }
+}

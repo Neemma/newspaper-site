@@ -29,10 +29,9 @@ const HomePage = () => {
     "/wakeup.svg",
     "/fresh.svg",
     "/smile.svg",
-
-
   ];
 
+  
   // State to keep track of the current image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -50,6 +49,7 @@ const HomePage = () => {
     );
   };
 
+  const [isHovering, setIsHovering] = useState(false);
 
   const pagenumber = 1;
   return (
@@ -118,18 +118,51 @@ const HomePage = () => {
                   <h3 className='set headerr'>Existence is Base</h3>
                   <p>Article contntent...Lorem ipsum dolor sit a uundeSed ut persSed ut perspiciatis uunde omSed umet, consectetur adiptis .Lorem ut perspiciatis uunde omnis iste sLorem ips ipsum dolor sit amet,ipsum dolor sit ametntium consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Sed ut persSent...Lo quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit aorm dolor sit a uundeSed ut persSed ut perspiciatis uunde omSed umet, consectetur adiptis .Lorem ut perspiciatis uunde omnis iste sLorem ips ipsum dolor sit amet,ipsum dolor sit ametntium consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, suaborum.
-                    </p>
+                  </p>
                 </article>
               </section>
             </div>
 
-            <div className='centre'>
+            {/* <div className='centre'>
               <div className="Image">
                 <section className='ClimberImage'>
                   <h3 className='set headerrr'>The Climber</h3>
                   <Image className='centerimage' src="/crop.svg" alt="Climber" width={500} height={500} />
                 </section>
                 <h3 className='captionn'>-Shin-ichi Sakamoto</h3>
+              </div>
+            </div> */}
+            <div className='centre'>
+              <div className="Image" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+                <section className='ClimberImage'>
+                  {
+                    isHovering
+                      ? (
+                        <div>
+                          <h3 className='set headerrr'>Monster</h3>
+
+                          <Image className='centerimage' src="/johanscream_1.svg" alt="Monster" width={500} height={500} />
+                          <h3 className='captionn'>-Naoki Urasawa</h3>
+                        </div>
+                        // <video className='video' width="500" height="500" autoPlay loop muted>
+                        //   <source src="/crop.mp4" type="video/mp4" />
+                        //   Your browser does not support the video tag.
+                        // </video>
+
+                      )
+
+                      : (
+                        <div>
+                          <h3 className='set headerrr'>The Climber</h3>
+                          <Image className='centerimage' src="/crop.svg" alt="Climber" width={500} height={500} />
+                          <h3 className='captionn'>-Shin-ichi Sakamoto</h3>
+                        </div>
+
+                      )
+
+                  }
+                </section>
+
               </div>
             </div>
 
@@ -284,7 +317,7 @@ const HomePage = () => {
 
         <div className="footer">
           <p className='footertext'>
-            Please note: All images featured on this site are the property of their respective owners. 
+            Please note: All images featured on this site are the property of their respective owners.
             <br></br>
             They are used here for illustrative purposes only and are not claimed as my own work.
           </p>

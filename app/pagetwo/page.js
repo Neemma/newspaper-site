@@ -10,12 +10,7 @@ const PageTwo = () => {
     const pagenumber = 3;
     return (
         <div className="container"
-        style={{
-            backgroundImage: `url(${texture.src})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat", 
-          }}>
+       >
             <div className="headercontainer"
             >
                 <div className="header2container">
@@ -29,7 +24,7 @@ const PageTwo = () => {
                     </div>
 
                     <div className="header3">
-                        <h3 className='adheading'>VOL 89</h3>
+                        <h3 className='adheading eighty'>VOL 89</h3>
                     </div>
                 </div>
                 <div className="header1">
@@ -39,16 +34,6 @@ const PageTwo = () => {
                 <div className="header2container">
                     <div className='header2 bordernone' 
                         style={{
-                            backgroundImage: `url(${backgroundImage.src})`,
-                            backgroundPosition: "center",
-                            backgroundSize: "cover",
-                            backgroundRepeat: "no-repeat",
-                            width: "70px",
-                            height: "140px",
-                            marginLeft: "30px",
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
                         }}
                     >
                     </div>
@@ -74,7 +59,7 @@ const PageTwo = () => {
                     <div className="itemImage large Imagetwo">
                         <h3 className='opotext'>The Kids and Their Absurdism</h3>
                         <i className='caption1'> Is nihilism the answer to our prayers? </i>
-                        <Image src={'/todayyoudied.svg'} width={600} height={500} alt="image" />
+                        <Image className='youdied' src={'/todayyoudied.svg'} width={600} height={500} alt="image" />
 
                     </div>
 
@@ -130,7 +115,7 @@ const PageTwo = () => {
                             </section>
                         </div>
 
-                        <div className="itemsmall">
+                        <div className="itemsmall hide">
                             <section>
 
                                 <article>
@@ -142,6 +127,7 @@ const PageTwo = () => {
                             </section>
                         </div>
                     </div>
+
 
                     <div className="item smaller">
                         <h3 className='opotext'>Disaster Hits The Capital</h3>
@@ -164,7 +150,7 @@ const PageTwo = () => {
                                     </article>
                                 </section>
                             </div>
-                            <div className="itemsmall">
+                            <div className="itemsmall hide">
                                 <section>
                                     <article>
                                         <p>Article content...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -179,11 +165,12 @@ const PageTwo = () => {
                     <div className="item opo">
                         <section>
                             <h3 className='opotext'> Earthquake </h3>
-                            <Image src={'/mobat100.svg'}
-                                width={250} height={300} alt="image" />
-                            <i className='caption'> A magnitude 5.6 earthquake shook citizens early this week </i>
+                            <Image src={'/mobat100.svg'} className='mobb'
+                                width={300} height={320} alt="image" />
+                            {/* <i className='caption'> A magnitude 5.6 earthquake shook citizens early this week </i> */}
                         </section>
                     </div>
+
                 </div>
             </main>
             <div className="footer">
