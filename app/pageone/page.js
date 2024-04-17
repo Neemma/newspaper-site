@@ -15,7 +15,7 @@ const PageOne = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const [modalVisible, setModalVisible] = useState(false);
-  const [play, { stop }] = useSound('/hum.mp3', { loop: true }); 
+  const [play, { stop }] = useSound('/hum.mp3', { loop: true });
 
   const handleOpenModal = () => {
     play();
@@ -43,11 +43,11 @@ const PageOne = () => {
   }, [controls, inView]);
 
   const funkyHoverAnimation = {
-    initial: { scale: 1, rotate: 0 }, 
+    initial: { scale: 1, rotate: 0 },
     hover: {
-      scale: 1.2, 
-      rotate: 360, 
-      transition: { type: 'spring', stiffness: 1000 } ,
+      scale: 1.2,
+      rotate: 360,
+      transition: { type: 'spring', stiffness: 1000 },
       duration: 'infinite'
 
     }
@@ -67,9 +67,68 @@ const PageOne = () => {
       <div className="container" onClick={handleOutsideClick}>
         <div className="headercontainer">
           <div className="header1">
-
-
-            <Image src="/urahara.svg" alt="Header Image" width={700} height={250} />
+            <div className="ticker-wrapper">
+              <div className="ticker-content">
+                <Image src="/pointfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handkira.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satthorfinn.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookgeto.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookcanute.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/throwballeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/balleren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handkira.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satthorfinn.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookgeto.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookcanute.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+              
+                <Image src="/throwballeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/balleren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handkira.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satthorfinn.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookgeto.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookcanute.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/throwballeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/balleren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/pointeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/handkira.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satfriend.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satjohan.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/satthorfinn.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookgeto.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/lookcanute.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/throwballeren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+                <Image src="/balleren.png" alt="Image 1" width={300} height={200} className="ticker-image" />
+              </div>
+              
+            </div>
           </div>
 
           <div className="header2container">
@@ -83,23 +142,21 @@ const PageOne = () => {
           </div>
 
         </div>
-        <div className="caption">
-          <p className='actualcaption'>rrrrrrrrrrddddddd</p>
-        </div>
+
 
         <div className='line'>
 
         </div>
 
         <div className="heading">
-          <p className='heading'>TITLE HEADING</p>
+          <p className='heading'>THE AGE OF FANATICS</p>
         </div>
 
         <main>
           <div className="grid">
 
             <div className='stack'>
-              <div className="item smalll">
+              <div className="item smalll c">
                 <section className='smalll'>
                   <h3 className='blacktext'>WANTED: For Crimes Against Humanity</h3>
                   <Image className='oldman' src="/oldman.svg" alt="Header Image" width={300} height={300} />
@@ -111,7 +168,7 @@ const PageOne = () => {
                   <p className='danger'> Do not attempt to converse with this man</p>
                 </section>
               </div>
-              <div className="item smallll">
+              <div className="item smallll f">
                 {/* <Image src="/trace.svg" alt="Header Image" width={200} height={90} /> */}
                 <div className="image-container">
                   <motion.div
@@ -139,7 +196,7 @@ const PageOne = () => {
               </div>
             </div>
 
-            <div className="item small">
+            <div className="item small a">
               <section>
                 <h2>News Section 2</h2>
                 <article>
@@ -152,7 +209,7 @@ const PageOne = () => {
               </section>
             </div>
 
-            <div className="item small">
+            <div className="item small b">
               <section>
                 <h2>News Section 3</h2>
                 <article>
@@ -205,7 +262,7 @@ const PageOne = () => {
 
 
 
-            <div className="item medium">
+            <div className="item medium d">
               <section>
                 <article>
                   <h3>Article Title 1</h3>
@@ -227,7 +284,7 @@ const PageOne = () => {
 
               </section>
 
-              <div className='item longest'>
+              <div className='item longest e'>
                 <section> <p>Ar Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                   Ssed quia non numquam eius sed quia non numquam eius sed quia non numquam eius sed quia non numquam eius sed quia non numquam eius sed quia non numquam eius ed ut Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                   Sed ut perspiciataut fugit, sed de omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.

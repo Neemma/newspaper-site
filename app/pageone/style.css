@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 body {
@@ -170,6 +171,7 @@ body {
   text-align: center;
   font-size: 60px;
   font-weight: regular;
+  font-family: 'Jersey 25', sans-serif;
   margin: 16px;
   color: #fff;
 }
@@ -195,7 +197,7 @@ main {
   background-color: transparent;
   padding: 10px;
   border: 1px solid rgb(255, 255, 255);
-  animation: flickered 5s infinite alternate;
+ 
 }
 
 .itemsmall {
@@ -221,9 +223,35 @@ main {
   height: fit-content;
 }
 
+.a{
+  animation: flickered 1.9s infinite alternate;
+}
+
+.b{
+  animation: flickered 1.3s infinite alternate;
+}
+.c{
+  animation: flickered 0.6s infinite alternate;
+}
+
+.d{
+  animation: flickered 1.2s infinite alternate;
+}
+
+.e{
+  animation: flickered 1.5s infinite alternate;
+}
+
+.f{
+  animation: flickered 0.3s infinite alternate;
+}
+
 .smalll {
   height: fit-content;
+ 
 }
+
+
 
 .oldman {
   background-color: white;
@@ -301,7 +329,7 @@ main {
   border: 1px solid white;
   height: 590px;
   padding: 10px;
-  animation: flickered 15s infinite alternate;
+  animation: flickered 12s infinite alternate;
 }
 
 .item2 {
@@ -310,7 +338,7 @@ main {
   background-color: transparent;
   border: 1px solid white;
   height: fit-content;
-  animation: flickered 12s infinite alternate;
+  animation: flickered 10s infinite alternate;
   padding: 10px;
 }
 
@@ -478,6 +506,97 @@ text {
   color: white;
 }
 
+/* Ticker Slideshow: */
+
+.header1 {
+  height: auto;
+  width: 80%;
+}
+/* .ticker-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative; 
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+  animation: scroll-left 30s linear infinite;
+}
+
+.ticker-item {
+  min-width: 300px;
+  margin-right: 20px; 
+  position: relative; 
+  background-color: red;
+}
+
+.ticker-image {
+  width:600px;  
+  height: 250px;
+  margin-right: 20px; 
+  background-color: #b3b009;
+ 
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white; 
+  text-align: left;
+  padding: 5px 0;
+  font-size: 14px; 
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+ */
+
+
+.ticker-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(236, 235, 235, 0.8);
+}
+
+.ticker-content {
+  display: flex;
+  animation: scroll-left 50s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+.ticker-image {
+  width:600px;  
+  height: 180px;
+  padding: 0px;
+  margin-right: 2px; 
+  box-shadow: 0 0 5px rgba(236, 235, 235, 0.8);
+}
+
+
 
 @media screen and (max-width: 1200px) {
   .longest {
@@ -512,11 +631,7 @@ text {
 
   }
 
-  .header1 {
-    height: auto;
-    width: 100%;
-  }
-
+  
   .header2container {
     width: 100%;
   }
