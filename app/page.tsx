@@ -10,10 +10,9 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Hide the loading screen after 3 seconds or after your content is loaded
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,18 +30,13 @@ const HomePage = () => {
     "/smile.svg",
   ];
 
-  
-  // State to keep track of the current image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Function to go to the next image
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex + 1 < comicImages.length ? prevIndex + 1 : 0
     );
   };
 
-  // Function to go to the previous image
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex - 1 >= 0 ? prevIndex - 1 : comicImages.length - 1
@@ -60,9 +54,6 @@ const HomePage = () => {
           For the best experience, view on a laptop or desktop computer.
         </div>
       )}
-
-      {/* Your existing page content */}
-
       <div className="container">
         <div className="header">
           <div className='cont'>
@@ -181,7 +172,7 @@ const HomePage = () => {
 
             <div className="item clear long">
               <section>
-                <h2 className='set headerr'>Ugly Section</h2>
+                <h2 className='set headerr'>UGLY SECTION</h2>
                 <article>
                   <h3 className='set headerr'>Colleagues vs Countenance</h3>
                   <p>Article content..Lorem ipsum dolor sit amet, consecteturunt in culpa qui officisum dolor sit amet,unt in culpa qui officisum dolor sit amet,unt in culpa qui officisum dolor sit amet,unt in culpa qui officisum dolor sit amet, adipisciSed ut perspiciatis und Article content..Lorem ipsum dArticle contentng elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 body {
   background-color: black;
+  font-family: "Quicksand", sans-serif;
+}
+
+.pagenumber {
+  color: white;
 }
 
 .container {
@@ -10,8 +17,6 @@ body {
   padding: 20px;
   background-color: black;
 }
-
-
 
 .headercontainer {
   display: flex;
@@ -29,10 +34,95 @@ body {
 }
 
 .caption {
-  text-align: right;
+  width: 75%;
+}
+
+.actualcaption {
   font-size: 13px;
-  width: 76%;
   font-style: italic;
+  text-align: left;
+  padding: 10px;
+  width: fit-content;
+  color: white;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 21px #fff,
+    0 0 151px rgb(255, 255, 255);
+}
+
+.heading :hover {
+  animation: flicker 0.5s infinite ease-out;
+  cursor: pointer;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 9px rgb(255, 255, 255);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flickerred {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 5px #b3b009,
+      0 0 18px rgb(255, 0, 0),
+      0 0 9px rgb(255, 0, 0);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+
+/* Flickering animation */
+@keyframes flickered {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow:
+      0 0 2px #fff,
+      0 0 3px rgb(255, 255, 255);
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
 }
 
 .header2container {
@@ -41,7 +131,7 @@ body {
   gap: 10px;
   width: 80%;
   margin-right: 20px;
- 
+
 }
 
 .header2 {
@@ -53,6 +143,8 @@ body {
   height: 70%;
   width: 100%;
   border: 1px solid #fff;
+  animation: flickered 6s infinite alternate;
+
 }
 
 .header3 {
@@ -64,25 +156,29 @@ body {
   height: 30%;
   width: 100%;
   border: 1px solid #fff;
+  animation: flickered 12s infinite alternate;
 }
 
 .line {
   margin-top: 20px;
-  border-bottom: 10px solid white;
-  border-top: 10px solid white;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
   padding: 10px;
 }
 
 .heading {
   text-align: center;
   font-size: 60px;
-  font-weight: bold;
-  margin: 20px;
+  font-weight: regular;
+  margin: 16px;
   color: #fff;
 }
 
-h3, p, h2{
+h3,
+p,
+h2 {
   color: #fff;
+  font-family: "Quicksand", sans-serif;
 }
 
 main {
@@ -99,7 +195,8 @@ main {
   background-color: transparent;
   padding: 10px;
   border: 1px solid rgb(255, 255, 255);
-}z
+  animation: flickered 5s infinite alternate;
+}
 
 .itemsmall {
   background-color: antiquewhite;
@@ -124,23 +221,75 @@ main {
   height: fit-content;
 }
 
-.smalll{
+.smalll {
   height: fit-content;
 }
 
-.oldman{
+.oldman {
   background-color: white;
 }
 
-.smallll{
-  height: fit-content;
+.smallll {
   margin-bottom: 10px;
- 
+  background-color: black;
+  margin-top: 10px;
+  padding: 5px;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.blacktext{
+
+
+.coupon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+.coupon {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  cursor: pointer;
+  animation: flickerred 1s infinite alternate;
+}
+
+
+.blacktext {
   color: black;
   background-color: white;
+  font-weight: 800;
+}
+
+.infoc {
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+.details{
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  font-size: 10px;
+
+}
+.danger{
+  color: red;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
+
 }
 
 
@@ -152,6 +301,7 @@ main {
   border: 1px solid white;
   height: 590px;
   padding: 10px;
+  animation: flickered 15s infinite alternate;
 }
 
 .item2 {
@@ -160,18 +310,22 @@ main {
   background-color: transparent;
   border: 1px solid white;
   height: fit-content;
+  animation: flickered 12s infinite alternate;
   padding: 10px;
 }
 
 .item3 {
-  background-color: transparent;
+  background-color: black;
   border: 1px solid white;
+  animation: flickered 8s infinite alternate;
   height: 280px;
   width: 100%;
   padding: 10px;
   overflow: hidden;
-  
+  word-spacing: 0px;
+  word-wrap: break-word;
 }
+
 
 .caption2 {
   float: right;
@@ -218,7 +372,8 @@ article {
   height: 40px;
   border: 1px solid white;
   margin-top: 20px;
- 
+  animation: flickered 6s infinite alternate;
+
 }
 
 text {
@@ -232,6 +387,7 @@ text {
   grid-column: span 3;
   height: 30px;
   border: 1px solid white;
+  animation: flickered 12s infinite alternate;
 }
 
 .long {
@@ -249,6 +405,79 @@ text {
   width: 98%;
 }
 
+/* modal: */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: transparent;
+  color: #000;
+}
+
+.modal-content {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: #fff;
+  height: fit-content;
+  padding: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+}
+
+/* .glasseffect{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 68%;
+  width: 50%;
+  position: relative;
+  border-radius: 22px;
+  animation: flickered 0.5s infinite alternate;
+} */
+
+.glasseffect {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 68%;
+  width: 50%;
+  position: relative;
+  border-radius: 22px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  border: 2px solid rgba(0, 255, 255, 0.75);
+  color: #000; 
+  animation: neonFlicker 1s infinite alternate;
+}
+
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    box-shadow: 0 0 20px rgba(1, 153, 153, 0.75);
+  }
+  20%, 22%, 24%, 55% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+  }
+  30%, 50%, 70%, 90% {
+    box-shadow: none;
+  }
+
+}
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  padding-bottom: 0px;
+  cursor: pointer;
+  float: right;
+  font-size: 28px;
+  color: white;
+}
+
 
 @media screen and (max-width: 1200px) {
   .longest {
@@ -260,6 +489,7 @@ text {
   width: 20px;
   height: 30px;
   border: 1px solid white;
+  animation: flickered 8s infinite alternate;
   margin-top: 10px;
 }
 
@@ -269,7 +499,7 @@ text {
   border: 1px solid #000;
   margin-top: 20px;
 }
- 
+
 
 @media screen and (max-width: 800px) {
   .container {
@@ -279,7 +509,7 @@ text {
   .headercontainer {
     flex-direction: column;
     width: 100%;
-   
+
   }
 
   .header1 {
@@ -313,17 +543,20 @@ text {
     grid-row: span 1;
     height: auto;
   }
-.item3{
-  height: 56%;
-  width: 160px;
-}
 
-
-@media screen and (max-width: 800px) {
-  .longest, .caption {
-    display: none;
+  .item3 {
+    height: 56%;
+    width: 160px;
   }
-}
+
+
+  @media screen and (max-width: 800px) {
+
+    .longest,
+    .caption {
+      display: none;
+    }
+  }
 }
 
 
@@ -335,7 +568,7 @@ text {
   .headercontainer {
     flex-direction: column;
     width: 100%;
-   
+
   }
 
   .header1 {
@@ -369,16 +602,18 @@ text {
     grid-row: span 1;
     height: auto;
   }
-.item3{
-  height: 56%;
-  width: 160px;
-}
+
+  .item3 {
+    height: 56%;
+    width: 160px;
+  }
 
 
-@media screen and (max-width: 600px) {
-  .longest, .caption {
-    display: none;
+  @media screen and (max-width: 600px) {
+
+    .longest,
+    .caption {
+      display: none;
+    }
   }
 }
-}
-

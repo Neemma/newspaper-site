@@ -9,6 +9,10 @@
   border: 1px solid #333;
   padding: 20px;
 }
+.overlayStyles {
+  backdrop-filter: blur(5px); 
+}
+
 p {
   padding: 0px;
   text-align: justify;
