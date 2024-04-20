@@ -16,7 +16,7 @@ const PageOne = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const [modalVisible, setModalVisible] = useState(false);
-  const [ShowSwipeHint, setShowSwipeHint] = useState(true);
+  const [showSwipeHint, setShowSwipeHint] = useState(true);
   const [play, { stop }] = useSound('/hum.mp3', { loop: true });
 
   const handleOpenModal = () => {
@@ -82,11 +82,28 @@ const PageOne = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length),
-    onSwipedRight: () => setCurrentIndex((prevIndex) => (prevIndex + images.length - 1) % images.length),
+    onSwiped: (event) => {
+      setCurrentIndex((prevIndex) => (prevIndex + (event.dir === 'Left' ? 1 : -1) + images.length) % images.length);
+      setShowSwipeHint(false);
+    },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true
   });
+
+  const swipeHintAnimation = {
+    visible: {
+      opacity: 1,
+      scale: [1, 1.2, 1],
+      transition: {
+        scale: {
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 0.8
+        }
+      }
+    },
+    hidden: { opacity: 0, scale: 0.5 }
+  };
 
   const pagenumber = 2;
   return (
@@ -175,15 +192,25 @@ const PageOne = () => {
           <div className="grid">
 
             <div className='stack'>
-            <div {...handlers} className="item small c">
-            <section className='small'>
-                <h3 className='blacktext'>{images[currentIndex].caption}</h3>
-                <Image className='oldman' src={images[currentIndex].src} alt="Header Image" width={300} height={300} />
-                <p className='infoc'>{images[currentIndex].info}</p>
-                <p className='details' dangerouslySetInnerHTML={{ __html: images[currentIndex].details }}></p>
-                <p className='danger'>{images[currentIndex].warning}</p>
-            </section>
-        </div>
+              <div {...handlers} className="item small c" style={{ position: 'relative' }}>
+                <section className='small'>
+                  <h3 className='blacktext'>{images[currentIndex].caption}</h3>
+                  <Image className='oldman' src={images[currentIndex].src} alt="Header Image" width={300} height={300} />
+                  <p className='infoc'>{images[currentIndex].info}</p>
+                  <p className='details' dangerouslySetInnerHTML={{ __html: images[currentIndex].details }}></p>
+                  <p className='danger'>{images[currentIndex].warning}</p>
+                  {showSwipeHint && (
+                    <motion.div
+                      variants={swipeHintAnimation}
+                      initial="visible"
+                      animate={showSwipeHint ? "visible" : "hidden"}
+                      className="swipe-hint"
+                    >
+                      <Image src="/swipe2.svg" alt="Header Image" width={50} height={20} />
+                    </motion.div>
+                  )}
+                </section>
+              </div>
               <div className="item smallll f">
                 {/* <Image src="/trace.svg" alt="Header Image" width={200} height={90} /> */}
                 <div className="image-container">
@@ -214,9 +241,9 @@ const PageOne = () => {
 
             <div className="item small a">
               <section>
-                <h2>News Section 2</h2>
+                <h2>FREEDOM</h2>
                 <article>
-                  <h3>Article Title 2</h3>
+                  <h3>Dedicate Your Hearts</h3>
                   <p>Articspiciat Sed utSed d ut perspiciati
                     Sed utSed ut perspici consequunturatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat volupta perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                     Sdantiuia nsequunturntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.erat voluptatem.ntent...</p>
@@ -227,9 +254,9 @@ const PageOne = () => {
 
             <div className="item small b">
               <section>
-                <h2>News Section 3</h2>
+                <h2>EQUALITY: THE FEVER DREAM</h2>
                 <article>
-                  <h3>Article Title 3</h3>
+                  <h3>A Monkey's Evolution</h3>
                   <p>Articspiciat Sed utSed d ut perspiciati
                     Sed utSed ut perspici consequunturatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat volupta perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                     Sdantiuia nsequunturntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.erat voluptatem.ntent...</p>
@@ -243,11 +270,11 @@ const PageOne = () => {
             <div className="small split">
               <div className='item1'>
                 <section>
-                  <h2>News Section 4</h2>
+                  <h2>BECOMING A BETTER PERSON</h2>
                   <article>
-                    <h3>Article Title 4</h3>
-                    <p>Ar Sed ut perspiciati iste iste s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                      Sed ut iunde omnis iste iste natus erromagni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.erat voluptatem.
+                    <h3>When are dreams too big?</h3>
+                    <p>Ar Sed ut perspiciati iste qui s unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                      Sed ut iunde omnis o quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam qua                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.erat voluptatem.
                       ticle</p>
                   </article>
                 </section>
@@ -257,18 +284,41 @@ const PageOne = () => {
                 <section>
                   <article>
                     <h2>VACANCIES</h2>
-                    <p>Article cuneoSed ut perspiciatis unde omnis iste natnteed ut perspiciatis unde omnis erspiciatis unde omnis iste natnteed ut perspiciatis unde omnis iste
-                      natus error sit voluptatem accusantium doloremque lau
-                      erspiciatis une omnis istedannt...</p>
+                    <p>LOCAL TRUCK DRIVER WANTED<br></br>
+                      60+ HOURS/WK  <br></br>
+                      CALL: 0722772277
+                      DRIVER'S LICENSE REQUIRED
+                      <br></br><br></br>         
+                      WAITER/WAITRESS WANTED<br></br>
+                      KFC KANGEMI <br></br>
+                      CALL: 0711111222
+                      <br></br><br></br>
+                      SALES REP WANTED<br></br>
+                      10,000+ COMMISSION <br></br>
+                      CALL: 0788888822
+                     
+                    </p>
                   </article>
                 </section>
 
                 <div className='item3'>
                   <section>
                     <article>
-                      <p>Articleatus error snatus error sit tatem accusantium doloremque lau
-                        erspiciatit voluptatem accusantium doloremque lau
-                        omnis is Sed ut perspiciatis unde omnis iste ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudante natnt...</p>
+                      <p> Wishing Jonathan Kinyanjui a Happy 76th Birthday! 
+                      <br></br>From Your Cousins- John and James.
+                        <br></br><br></br>
+                        NEED SOME QUICK CASH? <br></br>
+                        CALL: 0722772277
+                        FOR NEXT TO ZERO INTEREST LOANS!
+                        <br></br><br></br>
+                        HOUSES FOR RENT <br></br>
+                        BEDSITTER: 15,000 <br></br>
+                        ONE BEDROOM: 25,000 <br></br>
+                        CALL: 0711111222
+                        KANGEMI, EQUITY
+                        {/* WATER AND ELECTRICITY INCLUDED */}
+
+                      </p>
                     </article>
                   </section>
                 </div>
@@ -281,7 +331,7 @@ const PageOne = () => {
             <div className="item medium d">
               <section>
                 <article>
-                  <h3>Article Title 1</h3>
+                  <h3>And The World Fell Into Ruin </h3>
                   <p>Ar Sed iciatit voluptatem accusantium doloremque lau
                     erspiciat iciatit voluptatem accusantium doloremque lau
                     erspiciciatit voluptatem accusantium doloremque lau
@@ -295,7 +345,7 @@ const PageOne = () => {
                     erspiciat iciatit voluptatem accusantium doloremque lau
                     erspiciat iciatit voluptatem accusantium doloremque lau
                     erspiciat  ut perspiciatis unde omnis iste natuSed ut perspiciatis unde omnis iste natuspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam alised quia non numquam eius sed quia non numquam eius quam quaerat
-            </p>
+                  </p>
                 </article>
 
               </section>
