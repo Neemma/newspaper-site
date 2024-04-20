@@ -2,19 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 body {
-  background-color: black;
+  background-color: rgb(187, 11, 11);
   font-family: "Quicksand", sans-serif;
+  background: #000;
 }
 
 .pagenumber {
-  color: white;
+  color:  rgb(255, 146, 3) ;
 }
 
 .container {
   width: 70%;
   height: 100%;
   margin: auto;
-  border: 5px solid #ffffff;
+  border: 5px solid  rgb(255, 146, 3) ;
   padding: 20px;
   background-color: black;
 }
@@ -30,7 +31,7 @@ body {
   color: #fff;
   text-align: center;
   margin-bottom: 0px;
-  height: 40vh;
+  height: 30vh;
   width: fit-content;
 }
 
@@ -91,9 +92,10 @@ body {
   57%,
   100% {
     text-shadow:
-      0 0 5px #b3b009,
-      0 0 18px rgb(255, 0, 0),
-      0 0 9px rgb(255, 0, 0);
+      0 0 5px  red ,
+      0 0 18px  red ,
+      0 0 25px  red ,
+      0 0 9px  rgb(255, 0, 0) ;
   }
 
   20%,
@@ -126,11 +128,25 @@ body {
   }
 }
 
+h1{
+  font-family: 'Jersey 20', sans-serif;
+}
+
+.big{
+font-size: 40px;
+color:rgb(255, 146, 3);
+}
+
+.lessbig{
+  font-size: 34px;
+}
+
 .header2container {
   display: flex;
+  height: 30vh;
   flex-direction: column;
   gap: 10px;
-  width: 80%;
+  width: 30%;
   margin-right: 20px;
 
 }
@@ -139,12 +155,12 @@ body {
   background-color: none;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 0px 0;
   margin-bottom: 0px;
   height: 70%;
   width: 100%;
-  border: 1px solid #fff;
-  animation: flickered 6s infinite alternate;
+  border: 0.5px solid #fff;
+  animation: flickered 2s infinite alternate;
 
 }
 
@@ -152,12 +168,12 @@ body {
   background-color: transparent;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 0px 0;
   margin-bottom: 0px;
-  height: 30%;
+  height: 30vh;
   width: 100%;
-  border: 1px solid #fff;
-  animation: flickered 12s infinite alternate;
+  border: 0.3px solid #fff;
+  animation: flickered 0.7s infinite alternate;
 }
 
 .line {
@@ -176,8 +192,15 @@ body {
   color: #fff;
 }
 
-h3,
-p,
+
+
+h1:hover {
+  animation: flicker 0.5s infinite ease-out;
+  cursor: pointer;
+}
+
+
+p,h3,
 h2 {
   color: #fff;
   font-family: "Quicksand", sans-serif;
@@ -284,7 +307,7 @@ main {
 .coupon {
   text-align: center;
   font-size: 16px;
-  color: red;
+  color:  rgb(255, 145, 0);
   cursor: pointer;
   animation: flickerred 1s infinite alternate;
 }
@@ -476,17 +499,17 @@ text {
   position: relative;
   border-radius: 22px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-  border: 2px solid rgba(0, 255, 255, 0.75);
+  border: 2px solid rgba(255, 146, 3, 0.75);
   color: #000; 
   animation: neonFlicker 1s infinite alternate;
 }
 
 @keyframes neonFlicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    box-shadow: 0 0 20px rgba(1, 153, 153, 0.75);
-  }
+    box-shadow: 0 0 20px rgba(255, 146, 3, 0.75);
+  }  
   20%, 22%, 24%, 55% {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+    box-shadow: 0 0 20px rgba(255, 146, 3, 0.25);
   }
   30%, 50%, 70%, 90% {
     box-shadow: none;
@@ -509,68 +532,33 @@ text {
 /* Ticker Slideshow: */
 
 .header1 {
-  height: auto;
+  height: fit-content;
   width: 80%;
-}
-/* .ticker-wrapper {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  position: relative; 
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-}
-
-.ticker-content {
-  display: flex;
-  align-items: center;
-  animation: scroll-left 30s linear infinite;
+  background:
+    linear-gradient(90deg, rgb(255, 146, 3) 50%, transparent) repeat-x,
+    linear-gradient(90deg,  rgb(255, 146, 3)  50%, transparent 0) repeat-x,
+    linear-gradient(0deg,  rgb(255, 146, 3)  50%, transparent 0) repeat-y,
+    linear-gradient(0deg,  rgb(255, 146, 3)  50%, transparent 0) repeat-y;
+  background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  animation: linearGradientMove .1s infinite linear;
+  padding: 5px;
 }
 
-.ticker-item {
-  min-width: 300px;
-  margin-right: 20px; 
-  position: relative; 
-  background-color: red;
-}
 
-.ticker-image {
-  width:600px;  
-  height: 250px;
-  margin-right: 20px; 
-  background-color: #b3b009;
- 
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: white; 
-  text-align: left;
-  padding: 5px 0;
-  font-size: 14px; 
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
+@keyframes linearGradientMove {
   100% {
-    transform: translateX(-100%);
+    background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px;
   }
+  
 }
- */
-
 
 .ticker-wrapper {
   overflow: hidden;
   white-space: nowrap;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(236, 235, 235, 0.8);
+  box-shadow: 30px rgba(255, 146, 3, 0.8);
+  animation: flickered 1s infinite alternate;
 }
 
 .ticker-content {
@@ -580,22 +568,21 @@ text {
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-900%);
   }
 
 }
 
 .ticker-image {
-  width:600px;  
-  height: 180px;
-  padding: 0px;
-  margin-right: 2px; 
-  box-shadow: 0 0 5px rgba(236, 235, 235, 0.8);
-}
+  margin-right: 0px;
+  min-width: 180px;
 
+  max-height: 180px;
+
+}
 
 
 @media screen and (max-width: 1200px) {
