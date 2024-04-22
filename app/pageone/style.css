@@ -2,22 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 body {
-  background-color: rgb(187, 11, 11);
   font-family: "Quicksand", sans-serif;
-  background: #000;
+  background: rgb(228, 222, 212);
 }
 
+
 .pagenumber {
-  color: rgb(250, 173, 71);
+  color: rgb(255, 255, 255);
 }
+
+
 
 .container {
   width: 70%;
   height: 100%;
   margin: auto;
-  border: 5px solid rgb(243, 155, 40);
+  border: 5px solid rgb(240, 235, 235);
   padding: 20px;
+  z-index: 0;
   background-color: black;
+  border-radius: 2px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
 }
 
 .headercontainer {
@@ -126,10 +131,33 @@ body {
   55% {
     box-shadow: none;
   }
+
   90% {
     box-shadow:
-    0 0 3px rgb(255, 69, 0);
+      0 0 3px rgb(255, 69, 0);
   }
+}
+
+@keyframes flickerwhite {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    box-shadow:
+      0 0 2px #fff,
+      0 0 3px rgb(255, 255, 255);
+  }
+
+  20%,
+  24%,
+  55% {
+    box-shadow: none;
+  }
+
 }
 
 h1 {
@@ -147,12 +175,20 @@ h1 {
 
 .header2container {
   display: flex;
-  height: 30vh;
+  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   width: 30%;
   margin-right: 20px;
+}
 
+.header2 h1,
+.header3 h1 {
+  margin: 0;
+  padding: 18px 0;
+  width: 100%;
 }
 
 .header2 {
@@ -161,11 +197,11 @@ h1 {
   text-align: center;
   padding: 0px 0;
   margin-bottom: 0px;
-  height: 70%;
   width: 100%;
   border: 0.5px solid #fff;
   animation: flickered 2s infinite alternate;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .header3 {
@@ -174,7 +210,6 @@ h1 {
   text-align: center;
   padding: 0px 0;
   margin-bottom: 0px;
-  height: 30vh;
   width: 100%;
   border: 0.3px solid #fff;
   animation: flickered 0.7s infinite alternate;
@@ -225,7 +260,8 @@ main {
   background-color: transparent;
   padding: 10px;
   border: 1px solid rgb(255, 255, 255);
-
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .itemsmall {
@@ -243,16 +279,75 @@ main {
 .medium {
   grid-column: span 2;
   width: 98%;
+  padding-bottom: 0px;
   height: 42vh;
 }
 
-.small {
-  grid-row: span 1;
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 0px;
+  width: 290%;
+  height: fit-content;
+  gap: 10px;
+
+}
+
+.small.split {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  align-items: flex-start;
+}
+
+.item1 {
+  width: 60%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.item2 {
+  width: 30%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  width: 57%;
+  padding: 0px;
+  margin: 0px;
+  gap: 0px;
+
+}
+
+.item.medium,
+.item.longest {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
   height: fit-content;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .a {
   animation: flickered 1.9s infinite alternate;
+  padding-bottom: 0px;
 }
 
 .b {
@@ -285,6 +380,7 @@ main {
 .oldman {
   background-color: white;
 }
+
 /* swiping animation */
 /* @keyframes swipe {
   0% {
@@ -312,7 +408,9 @@ main {
 
 
 @keyframes swipe {
-  100% { transform: rotate(90deg); }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
 
@@ -390,6 +488,7 @@ main {
   border: 1px solid white;
   max-height: 590px;
   padding: 10px;
+  padding-bottom: 0px;
   animation: flickered 12s infinite alternate;
 }
 
@@ -402,6 +501,7 @@ main {
   animation: flickered 10s infinite alternate;
   padding: 10px;
   word-spacing: -2.4px;
+
 }
 
 .item3 {
@@ -409,11 +509,12 @@ main {
   border: 1px solid white;
   animation: flickered 8s infinite alternate;
   height: fit-content;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   word-spacing: -1px;
   padding-bottom: 0px;
- 
+  z-index: 40;
+
 }
 
 
@@ -496,6 +597,8 @@ text {
 }
 
 /* modal: */
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -590,16 +693,29 @@ text {
   height: fit-content;
   width: 80%;
   background:
+    linear-gradient(90deg, rgb(255, 255, 255) 50%, transparent) repeat-x,
+    linear-gradient(90deg, rgb(255, 255, 255) 50%, transparent 0) repeat-x,
+    linear-gradient(0deg, rgb(255, 255, 255) 50%, transparent 0) repeat-y,
+    linear-gradient(0deg, rgb(255, 255, 255) 50%, transparent 0) repeat-y;
+  background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  animation: linearGradientMove .2s infinite linear;
+  padding: 5px;
+}
+
+.sth {
+  height: fit-content;
+  width: 80%;
+  background:
     linear-gradient(90deg, rgb(255, 146, 3) 50%, transparent) repeat-x,
     linear-gradient(90deg, rgb(255, 146, 3) 50%, transparent 0) repeat-x,
     linear-gradient(0deg, rgb(255, 146, 3) 50%, transparent 0) repeat-y,
     linear-gradient(0deg, rgb(255, 146, 3) 50%, transparent 0) repeat-y;
   background-size: 4px 1px, 4px 1px, 1px 4px, 1px 4px;
   background-position: 0 0, 0 100%, 0 0, 100% 0;
-  animation: linearGradientMove .1s infinite linear;
+  animation: linearGradientMove .2s infinite linear;
   padding: 5px;
 }
-
 
 @keyframes linearGradientMove {
   100% {
@@ -612,8 +728,8 @@ text {
   overflow: hidden;
   white-space: nowrap;
   background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 30px rgba(255, 146, 3, 0.8);
-  animation: flickered 1s infinite alternate;
+  box-shadow: 30px rgba(255, 255, 255, 0.8);
+  animation: flickerwhite 1s infinite alternate;
 }
 
 .ticker-content {
@@ -635,32 +751,197 @@ text {
 .ticker-image {
   margin-right: 0px;
   min-width: 180px;
-
-  max-height: 180px;
+  /* max-height: 180px; */
+  height: 150px;
 
 }
 
+.item1,
+.longest {
+  overflow: hidden;
 
-@media screen and (max-width: 1200px) {
-  .longest {
-    width: 36vw;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 78%;
+
   }
+
 }
 
-.thin {
-  width: 20px;
-  height: 30px;
-  border: 1px solid white;
-  animation: flickered 8s infinite alternate;
-  margin-top: 10px;
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 90%;
+
+  }
+
 }
 
-.footer {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #000;
-  margin-top: 20px;
+
+
+
+@media screen and (max-width: 950px) {
+  .container {
+    width: 80%;
+  }
+
+  .headercontainer {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ticker-image {
+    height: 130px;
+  }
+
+  .header1 {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .header2container {
+    width: 101%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header2,
+  .header3 {
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .big {
+    font-size: 34px;
+  }
+
+  .lessbig {
+    font-size: 27px;
+  }
+
+  .line {
+    margin-top: 14px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    padding: 7px;
+  }
+
+  .heading {
+    font-size: 44px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    padding: 10px;
+
+  }
+
+  .item.small.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+    padding: 0px;
+  }
+
+  .item.small.c section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+
+  .infoc,
+  .details,
+  .danger {
+    padding: 0px;
+    margin: 2px;
+  }
+
+  .oldman {
+    width: 350px;
+    height: 350px;
+  }
+
+  .swipe-hint {
+    bottom: 30px;
+    scale: 2;
+  }
+
+  .coupon {
+    font-size: 20px;
+    color: rgb(255, 145, 0);
+    cursor: pointer;
+    animation: flickerred 1s infinite alternate;
+  }
+
+  .item1,
+  .item2 {
+    width: 95%;
+
+  }
+
+  .medium {
+    width: 100%;
+  }
+
+  .columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+
+  .flex {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .small.split {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .longest,
+  .item3 {
+    display: inherit;
+    width: 100%;
+  }
+
+ 
+ .smallll{
+  justify-content: center;
+  align-items: center;
+ }
+
+
 }
+
+
+
+
+
+
 
 
 @media screen and (max-width: 800px) {
@@ -671,107 +952,152 @@ text {
   .headercontainer {
     flex-direction: column;
     width: 100%;
-
+    justify-content: center;
+    align-items: center;
   }
 
-
-  .header2container {
-    width: 100%;
-  }
-
-  .header2,
-  .header3 {
-    height: auto;
-    width: 100%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .medium {
-    width: 50%;
-    height: auto;
-  }
-
-  .large,
-  .item1,
-  .item2 {
-    grid-column: span 1;
-    grid-row: span 1;
-    height: auto;
-  }
-
-  .item3 {
-    height: 56%;
-    width: 160px;
-  }
-
-
-  @media screen and (max-width: 800px) {
-
-    .longest,
-    .caption {
-      display: none;
-    }
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-  .container {
-    width: 90%;
-  }
-
-  .headercontainer {
-    flex-direction: column;
-    width: 100%;
-
+  .ticker-image {
+    height: 92px;
   }
 
   .header1 {
-    height: auto;
+    height: 14vh;
     width: 100%;
   }
 
   .header2container {
-    width: 100%;
+    width: 101%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
   }
 
   .header2,
   .header3 {
     height: auto;
     width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .big {
+    font-size: 28px;
+  }
+
+  .lessbig {
+    font-size: 24px;
+  }
+
+  .line {
+    margin-top: 10px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    padding: 5px;
+  }
+
+  .heading {
+    font-size: 40px;
   }
 
   .grid {
     grid-template-columns: 1fr;
   }
 
-  .medium {
-    width: 50%;
-    height: auto;
+  .item {
+    padding: 10px;
+
   }
 
-  .large,
+  .item.small.c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+    padding: 0px;
+  }
+
+  .item.small.c section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+
+  .infoc,
+  .details,
+  .danger {
+    padding: 0px;
+    margin: 2px;
+  }
+
+  .oldman {
+    width: 270px;
+    height: 270px;
+  }
+
+  .swipe-hint {
+    bottom: 30px;
+    scale: 2;
+  }
+
+  .coupon {
+    font-size: 12px;
+    color: rgb(255, 145, 0);
+    cursor: pointer;
+    animation: flickerred 1s infinite alternate;
+  }
+
   .item1,
   .item2 {
-    grid-column: span 1;
-    grid-row: span 1;
-    height: auto;
+    width: 95%;
+
   }
 
+  .medium {
+    width: 100%;
+  }
+
+  .columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+
+  .flex {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .small.split {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .longest,
   .item3 {
-    height: 56%;
-    width: 160px;
+    display: inherit;
+    width: 100%;
   }
 
+ .coupon-container{
+  display: none;
+ }
 
-  @media screen and (max-width: 600px) {
+ .smallll{
+  justify-content: center;
+  align-items: center;
+ }
 
-    .longest,
-    .caption {
-      display: none;
-    }
-  }
+
 }

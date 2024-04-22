@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Frijole&family=Life+Savers:wght@700;800&family=Noto+Sans+Symbols+2&family=Pixelify+Sans:wght@400;500;600;700&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+
 .container {
   width: 70%;
   height: 100%;
@@ -178,6 +179,10 @@ article {
   font-family: Rock Salt, cursive;
   color: #000;
   color: initial;
+}
+
+.pagenumber :hover {
+  scale: 1.1;
 }
 
 @media (max-width: 800px) {
