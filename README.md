@@ -18,3 +18,5 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+The site is not as responsive as it should be- work is still in progress
