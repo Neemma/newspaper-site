@@ -75,7 +75,7 @@ const PageOne = () => {
       caption: "WANTED: For Crimes Against Humanity",
       info: "If you have any information, contact the police immediately.",
       details: "Name: Oikawa Tooru  <br />",
-      warning: "If seen, please call local authorities"
+      warning: "Might be anywhere, but the Nationals"
     }
   ];
 
