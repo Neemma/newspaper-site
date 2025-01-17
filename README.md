@@ -13,7 +13,7 @@ https://newss-kohl.vercel.app/pageone
 https://newss-kohl.vercel.app/pagetwo
 
 ------------------------------------------
--- Looks Better with Browser at 90%
+-- Looks Better with Browser at 110%
 (view varies for different browsers)
 
 -- Code is clearly not the best!
